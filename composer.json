@@ -1,0 +1,22 @@
+{
+    "name": "polash/minilara",
+    "description": "Mini PHP MVC Framework",
+    "autoload": {
+        "psr-4": {
+            "Polash\\Minilara\\": "src/",
+            "App\\": "app/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Polash Mahmud",
+            "email": "polashmahmud@gmail.com"
+        }
+    ],
+    "require": {
+        "vlucas/phpdotenv": "^5.6"
+    },
+    "require-dev": {
+        "symfony/var-dumper": "^7.1"
+    }
+}
