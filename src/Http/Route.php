@@ -2,6 +2,8 @@
 
 namespace Polash\Minilara\Http;
 
+use Polash\Minilara\View\View;
+
 class Route
 {
     public $request;
@@ -32,9 +34,8 @@ class Route
         $method = $this->request->method();
         $action = isset(self::$routes[$method][$path]) ? self::$routes[$method][$path] : false;
 
-        if (!$action) {
-            echo '404 - not found!';
-            return;
+        if (!array_key_exists($path, self::$routes[$method])) {
+            View::makeError('404');
         }
 
         if (is_callable($action)) {

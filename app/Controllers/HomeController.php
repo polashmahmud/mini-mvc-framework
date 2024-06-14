@@ -2,10 +2,14 @@
 
 namespace App\Controllers;
 
+use Polash\Minilara\View\View;
+
 class HomeController
 {
     public function index()
     {
-        echo 'Home Page';
+        return view('home.index', [
+            'name' => 'Polash Mahmud'
+        ]);
     }
 }
